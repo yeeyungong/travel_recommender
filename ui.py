@@ -83,7 +83,7 @@ if st.button("Recommend"):
     if not recommendations.empty:
         st.subheader("Recommendations:")
         num_recommendations = len(recommendations)
-        num_rows = (num_recommendations + 2) // 3  # Calculate number of rows needed
+        num_rows = (num_recommendations + 4) // 5  # Calculate number of rows needed, ensuring at most 5 recommendations per row
         for i in range(num_rows):
             row_html = "<div style='display:flex; justify-content:center;'>"
             for j in range(3):
@@ -116,6 +116,11 @@ if st.button("Recommend"):
                     except Exception as e:
                         st.write(f"Error loading image from URL: {full_image_url}")
                         st.write(e)
+                    # Break the loop if we've displayed 5 recommendations in this row
+                    if j == 4:
+                        break
+            row_html += "</div>"
+            st.markdown(row_html, unsafe_allow_html=True)
 
     else:
         st.write("No recommendations found based on your input.")
