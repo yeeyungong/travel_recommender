@@ -98,13 +98,9 @@ if st.button("Recommend"):
                     try:
                         response = requests.get(full_image_url)
                         if response.status_code == 200:
-                            # Load the image using PIL
                             image = Image.open(BytesIO(response.content))
-                            # Resize the image while maintaining aspect ratio
-                            resized_image = image.resize((250, 350))
-                            # Convert the image to base64 format
+                            resized_image = image.resize((350, 350))
                             image_base64 = image_to_base64(resized_image)
-                            # Display the resized image with title above
                             st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
                                         f"<div style='margin: 0 auto;'>"
                                         f"<img src='data:image/jpeg;base64,{image_base64}' style='max-width: 250px; max-height: 350px;'>"
