@@ -1,0 +1,70 @@
+image_id,image_title,hashtag,location,image_url
+1,Pulau Aur,beach vacations,Johor,images/aur.jpg
+2,Kung Pao,foodie adventure,Johor,images/johorfood.jpg
+3,Johor Bahru City,city exploration,Johor,images/johorcity.jpg
+4,Pulau Sibu,beach vacations,Johor,images/sibu.jpg
+5,Wat Koh Wanararm,cultural tours,Kedah,images/watkohwanararm.jpg
+6,Pantai Cahaya Bulan,beach vacations,Kelantan,images/pantaicahayabulan.jpg
+7,Nasi Ulam Kampung,foodie adventure,Kelantan,images/kelantanfood.jpg
+8,St. Paul Church,cultural tours,Melaka,images/stpaulchurch.jpg
+9,Jonker Street,foodie adventure,Melaka,images/jonkerstreet.jpg
+10,Bukit Batu Putih,hiking,Negeri Sembilan,images/bukitbatuputih.jpg
+11,Masak Lemak Cili Api,foodie adventure,Negeri Sembilan,images/masaklemakciliapi.jpg
+12,Pahang City,city exploration,Pahang,images/pahangcity.jpg
+13,Concubine Lane,city exploration,Perak,images/perakstreet.jpg
+14,Chee Cheong Fun,foodie adventure,Perak,images/cheecheongfun.jpg
+15,Leaning Tower of Teluk Intan,cultural tours,Perak,images/leaningtower.jpg
+16,Wang Gunung,hiking,Perlis,images/wanggunung.jpg
+17,Al Hussain Mosque (Floating Mosque),cultural tours,Perlis,images/floatingmosque.jpg
+18,Komtar,city exploration,Penang,images/komtar.jpg
+19,Gurney Drive,foodie adventure,Penang,images/gurneydrive.jpg
+20,Manukan Island,beach vacations,Sabah,images/manukanisland.jpg
+21,Kota Kinabalu,hiking,Sabah,images/kinabalu.jpg
+22,Mount Santubong,hiking,Sarawak,images/santubong.jpg
+23,Gunung Serapi,hiking,Sarawak,images/serapi.jpg
+24,Batu Caves,cultural tours,Selangor,images/batucaves.jpg
+25,Islamic Civilization Park,cultural tours,Terengganu,images/islamicpark.png
+26,Pulau Redang,beach vacations,Terengganu,images/redang.jpg
+27,Legoland,leisure,Johor,images/legoland.jpg
+28,Putuo,cultural tours,Johor,images/putuo.jpg
+29,Premium Outlets Johor,shopping,Johor,images/premiumoutles.jpg
+30,Desaru fruit farm,hiking,Johor,images/desaru.jpg
+31,Chinese Heritage Museum,cultural tours,Johor,images/chineseheritagemuseum.jpg
+32,Puteri Harbour,hiking,Johor,images/puteriharbour.jpg
+33,KLCC,city exploration,Kuala Lumpur,images/klcc.jpg
+34,Pavilion KL,shopping,Kuala Lumpur,images/pavilion.jpg
+35,Theam Hou Temple,cultural tours,Kuala Lumpur,images/theamhou.jpg
+36,Petaling Street,city exploration,Kuala Lumpur,images/petalingstreet.jpg
+37,Masjid Wilayah Persekutuan,cultural tours,Kuala Lumpur,images/masjidwilayahpersekutuan.jpg
+38,Sungai Wang,shopping,Kuala Lumpur,images/sungeiwang.jpg
+39,Little Indio,cultural tours,Kuala Lumpur,images/littleIndio.jpg
+40,Langkawi,cultural tours,Kedah,images/langkawi.jpg
+41,Genting Chinese Temple,cultural tours,Kuala Lumpur,images/gentingtemple.jpg
+42,Redang Island,beach vacations,Terengganu,images/redangisland.jpg
+43,Banjaran Hotsprings Retreat,beach vacations,Ipoh,images/banjaran.jpg
+44,Taman Negara,hiking,Pahang,images/tamannegara.jpg
+45,Taman Negara National Park,hiking,Selangor,images/tamannegarapark.jpg
+46,Cameron Highland,hiking,Pahang,images/cameron.jpg
+47,Mossy Forest,hiking,Pahang,images/mossy.jpg
+48,Boh Tea Plantation,hiking,Pahang,images/boh.jpg
+49,Time Tunnel Musuem,cultural tours,Pahang,images/time.jpg
+50,Laksa,foodie adventure,Kedah,images/laksakedah.jpg
+51,Gulai Temenung,foodie adventure,Kedah,images/gulai.jpg
+52,Pasar Malam Setia Alam,foodie adventure,Selangor,images/setiaalampasarmalam.jpg
+53,Sekinchan,leisure,Selangor,images/sekinchan.jpg
+54,Sunway Lagoon,leisure,Selangor,images/sunwaylagoon.jpg
+55,Gua Kelam,hiking,Perlis,images/guakelam.jpg
+56,Penang Hill,hiking,Penang,images/penanghill.jpg
+57,Curry Mee,foodie adventure,Penang,images/currymee.jpg
+58,Oyster Omelette,foodie adventure,Penang,images/oysteromelette.jpg
+59,Chicken Rice,foodie adventure,Penang,images/chickenrice.jpg
+60,Sarawak Mee,foodie adventure,Sarawak,images/kolomee.jpg
+61,Kacang Ma,foodie adventure,Sarawak,images/kacangma.jpg
+62,Nasi Aruk,foodie adventure,Sarawak,images/nasiaruk.jpg
+63,Sinalau Bakas,foodie adventure,Sabah,images/sinalaubakas.jpg
+64,Sang Nyuk Mee,foodie adventure,Sabah,images/sangnyukmee.jpg
+65,Banana Leaf Curry,foodie adventure,Sabah,images/bananaleafcurry.jpg
+66,A' Famosa Fort,cultural tours,Melaka,images/afamosa.jpg
+67,Encore Melaka,cultural tours,Melaka,images/encore.jpg
+68,Menara Taming Sari,leisure,Melaka,images/menaratamingsari.jpg
+69,Chicken Rice Balls,foodie adventure,Melaka,images/chickenriceballs.jpg
