@@ -101,7 +101,7 @@ if st.button("Recommend"):
                             # Load the image using PIL
                             image = Image.open(BytesIO(response.content))
                             # Resize the image while maintaining aspect ratio
-                            resized_image = image.resize((250, 350))
+                            resized_image = image.resize((350, 350))
                             # Convert the image to base64 format
                             image_base64 = image_to_base64(resized_image)
                             # Display the resized image with title above
