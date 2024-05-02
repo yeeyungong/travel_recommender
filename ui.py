@@ -108,7 +108,7 @@ if st.button("Recommend"):
                             st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
                                         f"<div style='margin: 0 auto;'>"
                                         f"<img src='data:image/jpeg;base64,{image_base64}' style='max-width: 250px; max-height: 350px;'>"
-                                        st.image(full_image_url, caption=f"Similarity Score: {recommendation['score']}")
+                                        f"<p style='text-align:center;'>Similarity Score: {recommendation['score']}</p>"
                                         f"<div style='background-color: lightblue; padding: 5px; border-radius: 5px; margin-right: 10px; width: 150px; display:inline-block;'>{recommendation['location']}</div>"
                                         f"<div style='background-color: lightgreen; padding: 5px; border-radius: 5px; width: 150px; display:inline-block;'>{' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</div>"
                                         f"</div>", unsafe_allow_html=True)
