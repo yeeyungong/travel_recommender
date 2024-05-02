@@ -101,17 +101,17 @@ if st.button("Recommend"):
                             # Load the image using PIL
                             image = Image.open(BytesIO(response.content))
                             # Resize the image while maintaining aspect ratio
-                            resized_image = image.resize((250, 300))
+                            resized_image = image.resize((250, 350))
                             # Convert the image to base64 format
                             image_base64 = image_to_base64(resized_image)
                             # Display the resized image with title above
-                            st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2></div>", unsafe_allow_html=True)
-                            # Display the resized image
-                            st.image(resized_image, caption=f"Similarity Score: {recommendation['score']}")
-                            # Display location and hashtags in small boxes
-                            st.markdown(f"<div style='text-align:center; margin-top: 5px;'>"
-                                        f"<div style='background-color: lightblue; padding: 5px; border-radius: 5px; margin-right: 10px; width: 150px; display:inline-block;'>{recommendation['location']}</div>"
-                                        f"<div style='background-color: lightgreen; padding: 5px; border-radius: 5px; width: 150px; display:inline-block;'>{' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</div>"
+                            st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
+                                        f"<div style='margin: 0 auto;'>"
+                                        f"<img src='data:image/jpeg;base64,{image_base64}' style='max-width: 250px; max-height: 350px;'>"
+                                        f"<p style='text-align:center;'>Similarity Score: {recommendation['score']}</p>"
+                                        f"<p style='text-align:center;'>Location: {recommendation['location']}</p>"
+                                        f"<p style='text-align:center;'>Hashtags: {' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</p>"
+                                        f"</div>"
                                         f"</div>", unsafe_allow_html=True)
                     except Exception as e:
                         st.write(f"Error loading image from URL: {full_image_url}")
