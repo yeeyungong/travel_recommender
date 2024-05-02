@@ -83,7 +83,7 @@ if st.button("Recommend"):
     if not recommendations.empty:
         st.subheader("Recommendations:")
         num_recommendations = len(recommendations)
-        num_rows = (num_recommendations + 4) // 5  # Calculate number of rows needed, ensuring at most 5 recommendations per row
+        num_rows = (num_recommendations + 2) // 3  # Calculate number of rows needed
         for i in range(num_rows):
             row_html = "<div style='display:flex; justify-content:center;'>"
             for j in range(3):
@@ -101,7 +101,7 @@ if st.button("Recommend"):
                             # Load the image using PIL
                             image = Image.open(BytesIO(response.content))
                             # Resize the image while maintaining aspect ratio
-                            resized_image = image.resize((250, 350))
+                            resized_image = image.resize((250, 300))
                             # Convert the image to base64 format
                             image_base64 = image_to_base64(resized_image)
                             # Display the resized image with title above
@@ -116,11 +116,6 @@ if st.button("Recommend"):
                     except Exception as e:
                         st.write(f"Error loading image from URL: {full_image_url}")
                         st.write(e)
-                    # Break the loop if we've displayed 5 recommendations in this row
-                    if j == 4:
-                        break
-            row_html += "</div>"
-            st.markdown(row_html, unsafe_allow_html=True)
 
     else:
         st.write("No recommendations found based on your input.")
