@@ -113,9 +113,9 @@ try:
                     f"<div style='background-color: lightblue; padding: 5px; border-radius: 5px; margin-right: 10px; width: 150px; display:inline-block;'>{recommendation['location']}</div>"
                     f"<div style='background-color: lightgreen; padding: 5px; border-radius: 5px; width: 150px; display:inline-block;'>{' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</div>"
                     f"</div>", unsafe_allow_html=True)
-    except Exception as e:
+        except Exception as e:
     st.write(f"Error loading image from URL: {full_image_url}")
     st.write(e)
 
-        else:
+            else:
             st.write("No recommendations found based on your input.")
