@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 from io import BytesIO
 import base64
 from sklearn.neighbors import NearestNeighbors
@@ -98,18 +98,26 @@ if st.button("Recommend"):
                     try:
                         response = requests.get(full_image_url)
                         if response.status_code == 200:
-                            image = Image.open(BytesIO(response.content))
-                            resized_image = image.resize((350, 350))
-                            image_base64 = image_to_base64(resized_image)
-                            st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
-                                        f"<div style='margin: 0 auto;'>"
-                                        f"<img src='data:image/jpeg;base64,{image_base64}' style='max-width: 250px; max-height: 350px;'>"
-                                        f"<p style='text-align:center; font-size: 14px; color: grey;'>Similarity Score: {recommendation['score']}</p>"
-                                        f"<div style='background-color: lightblue; padding: 5px; border-radius: 5px; margin-right: 10px; width: 150px; display:inline-block;'>{recommendation['location']}</div>"
-                                        f"<div style='background-color: lightgreen; padding: 5px; border-radius: 5px; width: 150px; display:inline-block;'>{' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</div>"
-                                        f"</div>", unsafe_allow_html=True)
+                            try:
+                                image = Image.open(BytesIO(response.content))
+                                resized_image = image.resize((350, 350))
+                                image_base64 = image_to_base64(resized_image)
+                                st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
+                                            f"<div style='margin: 0 auto;'>"
+                                            f"<img src='data:image/jpeg;base64,{image_base64}' style='max-width: 250px; max-height: 350px;'>"
+                                            f"<p style='text-align:center; font-size: 14px; color: grey;'>Similarity Score: {recommendation['score']}</p>"
+                                            f"<div style='background-color: lightblue; padding: 5px; border-radius: 5px; margin-right: 10px; width: 150px; display:inline-block;'>{recommendation['location']}</div>"
+                                            f"<div style='background-color: lightgreen; padding: 5px; border-radius: 5px; width: 150px; display:inline-block;'>{' '.join(['#' + tag for tag in recommendation['hashtag'].split(', ')])}</div>"
+                                            f"</div>", unsafe_allow_html=True)
+                            except UnidentifiedImageError as e:
+                                st.write(f"Error loading image from URL: {full_image_url}")
+                                st.write("The image format could not be identified. Please try a different image.")
+                                st.write(e)
+                            except Exception as e:
+                                st.write(f"An unexpected error occurred while processing the image from URL: {full_image_url}")
+                                st.write(e)
                     except Exception as e:
-                        st.write(f"Error loading image from URL: {full_image_url}")
+                        st.write(f"Error fetching image from URL: {full_image_url}")
                         st.write(e)
                     row_html += "</div>"
             st.markdown(row_html, unsafe_allow_html=True)
