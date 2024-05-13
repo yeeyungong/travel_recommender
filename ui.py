@@ -56,6 +56,7 @@ def recommend_posts_knn(location, hashtag):
 def image_to_base64(image):
     buffered = BytesIO()
     image = image.convert('RGB')
+    # Convert the image to JPEG format
     image.save(buffered, format="JPEG")
     # Encode the bytes object to base64
     encoded_img = base64.b64encode(buffered.getvalue())
@@ -101,6 +102,7 @@ if st.button("Recommend"):
                             try:
                                 image = Image.open(BytesIO(response.content))
                                 resized_image = image.resize((350, 350))
+                                # Convert the image to JPEG format
                                 image_base64 = image_to_base64(resized_image)
                                 st.markdown(f"<div style='text-align:center'><h2>{recommendation['image_title']}</h2>"
                                             f"<div style='margin: 0 auto;'>"
